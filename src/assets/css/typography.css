@@ -1,0 +1,169 @@
+:root {
+  /* 
+  --base-line-height: 1.5; 
+  --base-font-size: calc(12px + 0.698vw);*/
+
+  --base-font-size: 16px;
+  --line-height: calc(var(--font-size) * 1.4);
+  --golden-ratio: 1.61803398875;
+
+  --h1-font-size: calc(
+    (var(--base-font-size) * var(--golden-ratio) * var(--golden-ratio))
+  );
+  --h2-font-size: calc(var(--base-font-size) * (var(--golden-ratio)));
+  --h3-font-size: var(--base-font-size);
+}
+
+/* Fluid typography with vw and calc for responsive design */
+/* @media screen and (min-width: 768px) {
+  :root {
+    --base-font-size: calc(1rem + 0.5vw);
+  }
+} */
+
+@font-face {
+  font-family: "Carrois Gothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/carroisgothic/v16/Z9XPDmFATg-N1PLtLOOxvIHl9amE1C8.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+  font-size: var(--p-font-size);
+  line-height: var(--line-height);
+  font-family: "Carrois Gothic", sans-serif;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  line-height: calc(var(--h1-font-size) * var(--line-height));
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  line-height: calc(var(--h2-font-size) * var(--line-height));
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+  line-height: calc(var(--h3-font-size) * var(--line-height));
+}
+
+ol,
+ul {
+  padding: 0;
+  margin: 0 0 1.45rem 1.45rem;
+}
+
+a {
+  color: var(--dark-gray);
+  text-decoration-skip-ink: none;
+}
+
+a:focus {
+  outline: 1px dashed var(--blue);
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+/* Import of the Inter Font*/
+/* @import url("https://rsms.me/inter/inter.css");
+@supports (font-variation-settings: normal) {
+} */
+
+/* Base */
+/* :root {
+  --font-size: calc(12px + 0.698vw);
+  --line-height: calc(var(--font-size) * 1.4);
+  --letter-spacing: calc(var(--font-size) * 0.0015);
+  --font-weight: 400;
+  --blue: #090909;
+  --dark-gray: #282c35;
+  /* --font-family: "Carrois Gothic", sans-serif; */
+/* --font-family: "Playfair Display", serif; */
+/* --font-family: "Inter", sans-serif; */
+/* } */
+
+/* html,
+body {
+  font-family: var(--font-family);
+  word-break: break-word;
+  font-variant-numeric: slashed-zero;
+  font-kerning: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizeLegibility;
+}
+
+p,
+li,
+b,
+i,
+strong,
+a {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  font-feature-settings: normal;
+  font-family: var(--font-family);
+}
+
+p,
+li,
+a {
+  font-weight: calc(var(--font-weight) * 1.33);
+} */
+
+/* h1 {
+  font-size: calc(var(--font-size) * 3);
+  letter-spacing: var(--letter-spacing);
+  font-weight: calc(var(--font-weight) * 2.66);
+  font-family: var(--font-family);
+}
+
+h2 {
+  font-size: calc(var(--font-size) * 2);
+  letter-spacing: var(--letter-spacing);
+  font-weight: calc(var(--font-weight) * 2.33);
+  font-family: var(--font-family);
+}
+
+h3 {
+  font-size: calc(var(--font-size) * 1.75);
+  letter-spacing: var(--letter-spacing);
+  font-weight: calc(var(--font-weight) * 2);
+  font-family: var(--font-family);
+}
+
+h4 {
+  font-size: calc(var(--font-size) * 1.5);
+  letter-spacing: var(--letter-spacing);
+  font-weight: calc(var(--font-weight) * 1.667);
+  font-family: var(--font-family);
+}
+
+h5 {
+  font-size: calc(var(--font-size) * 1.25);
+  letter-spacing: var(--letter-spacing);
+  font-weight: calc(var(--font-weight) * 1.5);
+  font-family: var(--font-family);
+}
+
+h6 {
+  font-size: calc(var(--font-size) * 1);
+  letter-spacing: var(--letter-spacing);
+  font-weight: calc(var(--font-weight) * 1);
+  font-family: var(--font-family);
+} */

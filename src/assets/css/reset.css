@@ -1,0 +1,18 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}

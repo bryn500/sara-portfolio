@@ -1,0 +1,159 @@
+.flex-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.grid {
+  display: grid;
+  gap: 0.2rem;
+  margin: 0 20px 0;
+}
+
+.grid-bordered {
+  background-color: #000;
+  border: 0.2rem solid #000;
+  margin-bottom: 1.45rem;
+}
+
+.mb-1 {
+  margin-bottom: 1.45rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.grid-1x1 {
+  grid-template-columns: repeat(1, minmax(0, auto));
+  grid-template-areas: "p1";
+}
+
+.grid-2x1 {
+  grid-template-columns: repeat(2, minmax(0, auto));
+  grid-template-areas: "p1 p2";
+}
+
+.grid-1x3 {
+  grid-template-columns: repeat(1, minmax(0, auto));
+  grid-template-areas:
+    "p1"
+    "p2"
+    "p3";
+}
+
+.grid-2x2 {
+  grid-template-columns: repeat(2, minmax(0, auto));
+  grid-template-areas:
+    "p1 p2"
+    "p3 p4";
+}
+
+.grid-2x2-left {
+  grid-template-columns: repeat(2, minmax(0, auto));
+  grid-template-areas:
+    "p1 p2"
+    "p1 p3";
+}
+
+.grid-2x2-right {
+  grid-template-columns: repeat(2, minmax(0, auto));
+  grid-template-areas:
+    "p1 p3"
+    "p2 p3";
+}
+
+.grid-2x2-top {
+  grid-template-columns: repeat(2, minmax(0, auto));
+  grid-template-areas:
+    "p1 p1"
+    "p2 p3";
+}
+
+.grid-2x2-bottom {
+  grid-template-columns: repeat(2, minmax(0, auto));
+  grid-template-areas:
+    "p1 p2"
+    "p3 p3";
+}
+
+.grid-2x4 {
+  grid-template-columns: repeat(2, minmax(0, auto));
+  grid-template-areas:
+    "p1 p2"
+    "p1 p3"
+    "p4 p4";
+}
+
+.grid-3x3-bottom {
+  grid-template-columns: repeat(2, minmax(0, auto));
+  grid-template-areas:
+    "p1 p2 p3"
+    "p4 p4 p4"
+    "p4 p4 p4";
+}
+
+.grid-2x3 {
+  grid-template-columns: repeat(2, minmax(0, auto));
+  grid-template-areas:
+    "p1 p2"
+    "p3 p4"
+    "p5 p5";
+}
+
+.grid-5x4 {
+  grid-template-columns: repeat(5, minmax(0, auto));
+  grid-template-areas:
+    "p1 p1 p2 p3 p6"
+    "p1 p1 p2 p3 p7"
+    "p1 p1 p4 p5 p8"
+    "p1 p1 p4 p5 p9";
+}
+
+.p1,
+.p2,
+.p3,
+.p4,
+.p5,
+.p6,
+.p7,
+.p8,
+.p9 {
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.p1 {
+  grid-area: p1;
+}
+
+.p2 {
+  grid-area: p2;
+}
+
+.p3 {
+  grid-area: p3;
+}
+
+.p4 {
+  grid-area: p4;
+}
+
+.p5 {
+  grid-area: p5;
+}
+
+.p6 {
+  grid-area: p6;
+}
+
+.p7 {
+  grid-area: p7;
+}
+
+.p8 {
+  grid-area: p8;
+}
+
+.p9 {
+  grid-area: p9;
+}

@@ -1,3 +1,134 @@
-body {
-  margin: 10px;
+:root {
+  --content-padding: 11.25rem;
+  --element-padding: 1.46rem;
+}
+
+/* Splash Banner */
+.banner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.full-screen-banner {
+  height: 100vh;
+}
+
+.half-screen-banner {
+  height: 50vh;
+}
+
+.banner-image {
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wood-background {
+  background-image: url("/assets/img/wood.jpg");
+}
+
+.people-background {
+  background-image: url("/assets/img/people.jpg");
+}
+
+.banner-text {
+  background: rgba(0, 0, 0, 0.23);
+  border: 6px double #000;
+  color: #eee;
+  padding: 0 var(--element-padding);
+  width: calc(100vw - var(--content-padding));
+  margin-top: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+
+.banner-text h1 {
+  letter-spacing: 0.45rem;
+  text-transform: uppercase;
+}
+
+/* Main Nav */
+.banner-nav {
+  margin-bottom: var(--element-padding);
+}
+
+.banner-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.banner-nav li {
+  margin: 0 0.45rem;
+}
+
+.banner-nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff; /* Text color for the links */
+  padding: 0.45rem 0.23rem;
+  text-transform: uppercase;
+}
+
+.banner-nav span {
+  display: inline-block;
+  position: relative;
+}
+
+.banner-nav span::after {
+  background-color: #000000;
+  content: "";
+  height: 2px;
+  width: 100%;
+  display: block;
+  margin-top: 2px;
+  position: absolute;
+}
+
+.banner-nav a:hover,
+.banner-nav a:focus {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Section features */
+.feature {
+  min-height: 200px;
+}
+
+.rotate {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  align-self: flex-end;
+  white-space: nowrap;
+}
+
+.content-padding {
+  width: calc(100vw - var(--content-padding));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature {
+  transform: translateY(250px); /* Initially move sections down by 20px */
+  transition: transform 0.66s;
+}
+
+.feature.visible {
+  transform: translateY(0); /* Move sections back to their original position */
 }
