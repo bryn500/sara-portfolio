@@ -15,8 +15,7 @@
 !go.mod
 !config.json
 !templates/**/*.html
-!build/assets/**
-
+!build/assets/css/**
 
 !README.md
 !LICENSE
