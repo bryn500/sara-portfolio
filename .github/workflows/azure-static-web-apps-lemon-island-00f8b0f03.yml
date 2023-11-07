@@ -65,7 +65,7 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az storage blob upload-batch --account-name strgshared01 --auth-mode key -d '$web' -s ./build
+            az storage blob upload-batch --overwrite --account-name strgshared01 --auth-mode key -d '$web' -s ./build
       # Azure logout
       - name: logout
         run: |
