@@ -22,6 +22,19 @@ func BuildTemplates(config startup.AppConfig) error {
 		return err
 	}
 
+	// // example parallel
+	// errChan := make(chan error, len(files))
+	// var wg sync.WaitGroup
+	// for _, file := range files {
+	// 	wg.Add(1)
+	// 	go func(fileName string) {
+	// 		defer wg.Done()
+	// 	}(fileName)
+	// }
+	// // Wait for all goroutines to finish.
+	// wg.Wait()
+	// close(errChan)
+
 	for _, file := range files {
 		if file.IsDir() {
 			continue
