@@ -1,0 +1,20 @@
+{
+  "name": "sara-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryn500/sara-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bryn500/sara-portfolio/issues"
+  },
+  "homepage": "https://github.com/bryn500/sara-portfolio#readme",
+  "dependencies": {
+    "sharp": "^0.32.6"
+  }
+}

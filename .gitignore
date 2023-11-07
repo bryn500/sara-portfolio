@@ -16,9 +16,15 @@
 !config.json
 !templates/**/*.html
 !build/assets/css/**
+!image.js
+!package.json
+!package-lock.json
 
 !README.md
 !LICENSE
 
 # ...even if they are in subdirectories
 !*/
+
+# re-ignore all in node modules even if they match the rules above
+node_modules
