@@ -1,0 +1,68 @@
+{{define "footer"}}
+<footer>
+  <div class="content-padding">
+    <nav>
+      <header>
+        <h3>Contact me at:</h3>
+      </header>
+      <ul>
+        <li><a href="https://instagram.com/...">instagram</a></li>
+        <li>
+          <a href="mailto:hello@example.com">hello@example.com</a>
+        </li>
+      </ul>
+    </nav>
+    <nav>
+      <header>
+        <h3>Sharing</h3>
+      </header>
+      <ul>
+        <li>
+          <!-- Facebook Share Button -->
+          <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL">
+            Share on Facebook
+          </a>
+        </li>
+        <li>
+          <!-- Twitter Share Button -->
+
+          <a href="https://twitter.com/share?url=YOUR_URL&text=YOUR_TEXT">
+            Share on Twitter
+          </a>
+        </li>
+        <li>
+          <!-- LinkedIn Share Button -->
+          <a
+            href="https://www.linkedin.com/shareArticle?url=YOUR_URL&title=YOUR_TITLE"
+          >
+            Share on LinkedIn
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<picture>
+  <source
+    srcset="
+      https://via.placeholder.com/320x240 320w,
+      https://via.placeholder.com/480x360 480w,
+      https://via.placeholder.com/600x400 600w
+    "
+    type="image/png"
+    sizes="(max-width: 399px) 320px, (max-width: 1279px) 480px, 600px"
+  />
+  <img
+    alt="test"
+    sizes="(max-width: 399px) 320px, (max-width: 1279px) 480px, 600px"
+    srcset="
+      https://via.placeholder.com/320x240 320w,
+      https://via.placeholder.com/480x360 480w,
+      https://via.placeholder.com/600x400 600w
+    "
+    src="https://via.placeholder.com/320x240"
+    loading="lazy"
+  />
+</picture>
+{{end}}

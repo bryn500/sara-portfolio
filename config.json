@@ -1,0 +1,18 @@
+{
+  "inputDir": "templates/",
+  "outputDir": "build/",
+  "port": "8080",
+  "pageData": {
+    "page1.html": {
+      "Title": "Page 1",
+      "Body": "Test"
+    },
+    "page2.html": {
+      "Title": "Page 2"
+    },
+    "home.html": {
+      "Title": "Sara Whalley - Props, Models & Furniture - Portfolio",
+      "Description": "Sara Whalley, showcasing a portfolio of projects, skills, and experience with Carpentry, Upholstery, Metalwork, Model and Prop Making"
+    }
+  }
+}

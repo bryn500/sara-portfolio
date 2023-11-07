@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{.Title}}</title>
+
+    <meta name="description" content="{{.Description}}" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#333333" />
+
+    <link media="all" rel="stylesheet" href="/assets/css/reset.css" />
+    <link media="all" rel="stylesheet" href="/assets/css/typography.css" />
+    <link media="all" rel="stylesheet" href="/assets/css/grid.css" />
+    <link media="all" rel="stylesheet" href="/assets/css/main.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Carrois+Gothic"
+      media="all"
+    /> -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:regular,700,italic&amp;display=swap"
+      media="all"
+    /> -->
+  </head>
+
+  <body>
+    <main>{{template "content" .}}</main>
+    {{template "footer" .}}
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll(".feature");
+
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0, // Adjust the threshold as needed
+        };
+
+        const observerCallback = (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        };
+
+        const observer = new IntersectionObserver(
+          observerCallback,
+          observerOptions
+        );
+
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+      });
+    </script>
+    <script async src="//www.instagram.com/embed.js"></script>
+  </body>
+</html>
