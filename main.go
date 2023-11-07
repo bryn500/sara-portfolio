@@ -3,8 +3,6 @@ package main
 import (
 	"log"
 	"os"
-	"saraweb/startup"
-	"saraweb/templates"
 )
 
 func main() {
@@ -20,18 +18,18 @@ func main() {
 		}
 	}
 
-	config, err := startup.LoadConfig("config.json")
+	config, err := LoadConfig("config.json")
 	if err != nil {
 		log.Fatalf("Error loading config,json: %v", err)
 		return
 	}
 
-	if err := templates.BuildTemplates(config); err != nil {
+	if err := BuildTemplates(config); err != nil {
 		log.Fatalf("Error building templates: %v", err)
 		return
 	}
 
 	if isDev {
-		Start(config)
+		StartServer(config)
 	}
 }

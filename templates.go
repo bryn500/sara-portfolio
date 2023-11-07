@@ -1,39 +1,23 @@
-package templates
+package main
 
 import (
 	"fmt"
 	"html/template"
 	"os"
 	"path/filepath"
-	"saraweb/startup"
 )
 
-func BuildTemplates(config startup.AppConfig) error {
+func BuildTemplates(config AppConfig) error {
 	sharedTemplates := []string{
 		config.InputDir + "shared/base.html",
 		config.InputDir + "shared/nav.html",
 		config.InputDir + "shared/footer.html",
 	}
 
-	fmt.Printf("input dir: %s\n", config.InputDir)
-
 	files, err := os.ReadDir(config.InputDir)
 	if err != nil {
 		return err
 	}
-
-	// // example parallel
-	// errChan := make(chan error, len(files))
-	// var wg sync.WaitGroup
-	// for _, file := range files {
-	// 	wg.Add(1)
-	// 	go func(fileName string) {
-	// 		defer wg.Done()
-	// 	}(fileName)
-	// }
-	// // Wait for all goroutines to finish.
-	// wg.Wait()
-	// close(errChan)
 
 	for _, file := range files {
 		if file.IsDir() {
@@ -46,7 +30,7 @@ func BuildTemplates(config startup.AppConfig) error {
 			continue
 		}
 
-		fmt.Printf("building file for: %s\n", fileName)
+		fmt.Printf("building: %s\n", config.InputDir+fileName)
 
 		pageTemplates := append(sharedTemplates, config.InputDir+fileName)
 		baseTmpl, err := template.ParseFiles(pageTemplates...)
@@ -59,6 +43,8 @@ func BuildTemplates(config startup.AppConfig) error {
 			return err
 		}
 		defer outputFile.Close()
+
+		fmt.Printf("output: %s\n", config.OutputDir+fileName)
 
 		if err := baseTmpl.Execute(outputFile, config.PageData[fileName]); err != nil {
 			return err
